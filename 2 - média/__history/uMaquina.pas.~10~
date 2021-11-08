@@ -1,0 +1,75 @@
+unit uMaquina;
+
+interface
+
+uses
+  uIMaquina, Classes, uTroco, System.SysUtils, untFuncoes;
+
+type
+
+  TMaquina = class(TInterfacedObject, IMaquina)
+  public
+    function MontarTroco(Troco: Double): TList;
+  end;
+
+implementation
+
+uses math;
+
+function TMaquina.MontarTroco(Troco: Double): TList;
+var LocInteiro, LocDecimal, LocQtd, LocResto: Integer;
+    LocDouble: Double;
+    StrAux: String;
+    LocLista: TList;
+begin
+  LocLista := TList.Create;
+  LocQtd := 0;
+  LocResto := 0;
+  LocDouble := StrToFloat(StringReplace(FloatToStr(Troco),'.','', [rfReplaceAll, rfIgnoreCase]));
+  StrAux := FloatToStr(LocDouble);
+  LocDecimal := StrToInt(Copiar(StrAux,Tamanho(StrAux)-1,2));
+  LocInteiro := Trunc(LocDouble);
+
+  //Calculando a parte Inteira
+  LocQtd := CalcularResto(LocInteiro, LocResto, 100);
+  edCentena.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 50);
+  edDezena.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 20);
+  edVinte.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 10);
+  edDez.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 5);
+  edCinco.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 2);
+  edDois.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 1);
+  edUm.Text := IntToStr(LocQtd);
+
+  LocResto := 0;
+  //Calculando a parte decimal
+  LocQtd := CalcularResto(LocDecimal, LocResto, 50);
+  edCinquentaCentavos.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 25);
+  edVinteCincoCentavos.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 10);
+  edDezCentavo.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 5);
+  edCincoCentavos.Text := IntToStr(LocQtd);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 1);
+  edUmCentavo.Text := IntToStr(LocQtd);
+  }
+end;
+
+end.
+

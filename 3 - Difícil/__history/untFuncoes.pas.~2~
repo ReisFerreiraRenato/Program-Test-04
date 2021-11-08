@@ -1,0 +1,11 @@
+unit untFuncoes;
+
+interface
+  function EstarnoVetor(prmElemento: Integer; prmVetor: array of integer): Boolean;
+implementation
+
+function EstarnoVetor(prmElemento: Integer; prmVetor: array of integer): Boolean;
+begin
+
+end;
+end.

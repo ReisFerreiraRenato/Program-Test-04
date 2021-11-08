@@ -1,0 +1,35 @@
+unit untFuncoes;
+
+interface
+  function EstarnoVetor(prmElemento1, prmElemento2: Integer; prmVetor: array of integer): Boolean;
+implementation
+
+function EstarnoVetor(prmElemento1, prmElemento2: Integer; prmVetor: array of integer): Boolean;
+var Contador: integer;
+    Confirmacao1, Confirmacao2: Boolean;
+begin
+  Result:= False;
+  for Contador := 0 to Length(prmVetor)-1 do
+  begin
+    if prmVetor[Contador] = prmElemento1 then
+    begin
+      Confirmacao1:= True;
+      break;
+    end;
+  end;
+
+  for Contador := 0 to Length(prmvetor) do
+  begin
+    if prmVetor[Contador] = prmElemento1 then
+    begin
+      Confirmacao2:= True;
+      break;
+    end;
+  end;
+
+  if Confirmacao1 and Confirmacao2 then
+    Result := True;
+
+end;
+
+end.

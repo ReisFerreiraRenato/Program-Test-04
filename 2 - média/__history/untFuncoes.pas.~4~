@@ -1,0 +1,18 @@
+unit untFuncoes;
+
+interface
+
+function CalcularResto(prmValor: Integer; var prmResto: Integer; prmDivisor: Integer): Integer;
+
+implementation
+
+function CalcularResto(prmValor: Integer; var prmResto: Integer; prmDivisor: Integer): Integer;
+var LocAux: Integer;
+    LocDouble: Double;
+begin
+  LocDouble := prmValor / prmDivisor;
+  prmResto  := prmValor - (prmDivisor*trunc(LocDouble));
+  result    := Trunc(LocDouble);
+end;
+
+end.

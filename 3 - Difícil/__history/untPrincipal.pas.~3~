@@ -1,0 +1,41 @@
+unit untPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    Panel1: TPanel;
+    edNum1AdicionarConexao: TEdit;
+    edNum2AdicionarConexao: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    btAdicionarConexao: TButton;
+    Panel2: TPanel;
+    edNum1VerificarConexao: TEdit;
+    Label5: TLabel;
+    edNum2VerificarConexao: TEdit;
+    Label4: TLabel;
+    btVerificarConexao: TButton;
+    Memo1: TMemo;
+    Panel3: TPanel;
+    Label1: TLabel;
+    edElemento: TEdit;
+    btAddElemento: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,21 @@
+program QS6;
+
+
+
+
+
+uses
+  uINetwork in 'uINetwork.pas',
+  uSubstitui in 'uSubstitui.pas',
+  untClasses in 'untClasses.pas',
+  untFuncoes in 'untFuncoes.pas',
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal};
+
+begin
+  frmPrincipal:= TfrmPrincipal.Create(nil);
+  frmPrincipal.ShowModal;
+
+  frmPrincipal := nil;
+  frmPrincipal.Free;
+end.
+

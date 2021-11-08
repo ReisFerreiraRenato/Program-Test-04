@@ -1,0 +1,88 @@
+unit uMaquina;
+
+interface
+
+uses
+  uIMaquina, Classes, uTroco, System.SysUtils, untFuncoes;
+
+type
+
+  TMaquina = class(TInterfacedObject, IMaquina)
+  public
+    function MontarTroco(Troco: Double): TList;
+  end;
+
+implementation
+
+uses math;
+
+function TMaquina.MontarTroco(Troco: Double): TList;
+var LocInteiro, LocDecimal, LocQtd, LocResto: Integer;
+    LocDouble: Double;
+    StrAux: String;
+    LocLista: TList;
+    LocCedula: TTroco;
+begin
+  LocLista := TList.Create;
+  LocQtd := 0;
+  LocResto := 0;
+  LocDouble := StrToFloat(StringReplace(FloatToStr(Troco),'.','', [rfReplaceAll, rfIgnoreCase]));
+  StrAux := FloatToStr(LocDouble);
+  LocDecimal := StrToInt(Copiar(StrAux,Tamanho(StrAux)-1,2));
+  LocInteiro := Trunc(LocDouble);
+
+  //Calculando a parte Inteira
+  LocQtd := CalcularResto(LocInteiro, LocResto, 100);
+  LocCedula := TTroco.Create(ceNota100,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 50);
+  LocCedula := TTroco.Create(ceNota50,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 20);
+  LocCedula := TTroco.Create(ceNota20,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 10);
+  LocCedula := TTroco.Create(ceNota10,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 5);
+  LocCedula := TTroco.Create(ceNota5,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 2);
+  LocCedula := TTroco.Create(ceNota2,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 1);
+  LocCedula := TTroco.Create(ceMoeda1,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocResto := 0;
+  //Calculando a parte decimal
+  LocQtd := CalcularResto(LocDecimal, LocResto, 50);
+  LocCedula := TTroco.Create(ceMoeda50,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 25);
+  LocCedula := TTroco.Create(ceMoeda25,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 10);
+  LocCedula := TTroco.Create(ceMoeda10,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 5);
+  LocCedula := TTroco.Create(ceMoeda5,LocQtd);
+  LocLista.Add(LocCedula);
+
+  LocQtd := CalcularResto(LocResto, LocResto, 1);
+  LocCedula := TTroco.Create(ceMoeda1,LocQtd);
+  LocLista.Add(LocCedula);
+
+end;
+
+end.
+

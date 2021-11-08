@@ -1,0 +1,14 @@
+unit untFuncoes;
+
+interface
+
+function CalcularResto(prmValor: Double; var prmResto: Double; prmDivisor: Integer): Integer;
+
+implementation
+
+function CalcularResto(prmValor: Double; var prmResto: Double; prmDivisor: Integer): Integer;
+begin
+
+end;
+
+end.

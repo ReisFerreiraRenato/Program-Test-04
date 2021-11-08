@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/10/02 08:59:50.000.307,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 09:00:19.000.324,D:\Teste Via Soft\New\untClasses.pas=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 09:33:33.000.620,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 09:33:51.000.348,D:\Teste Via Soft\New\untFuncoes.pas=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 17:14:31.000.764,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 17:14:49.000.956,D:\Teste Via Soft\New\untPrincipal.pas=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 17:14:49.000.956,D:\Teste Via Soft\New\untPrincipal.dfm=D:\Teste Via Soft\New\Unit1.dfm</Transaction>
+    <Transaction>2021/10/02 17:43:46.000.862,D:\Teste Via Soft\New\untFuncoes.pas=</Transaction>
+    <Transaction>2021/10/02 17:44:38.000.828,=D:\Teste Via Soft\New\uFuncoes.pas</Transaction>
+    <Transaction>2021/10/02 17:45:44.000.457,D:\Teste Via Soft\New\uFuncoes.pas=</Transaction>
+    <Transaction>2021/10/02 17:46:31.000.853,=D:\Teste Via Soft\New\untFuncoes.pas</Transaction>
+    <Transaction>2021/10/02 18:14:25.000.953,D:\Teste Via Soft\New\uISubstitui.pas=D:\Teste Via Soft\New\uINetwork.pas</Transaction>
+    <Transaction>2021/10/02 18:28:51.000.369,D:\Teste Via Soft\New\untPrincipal.pas=</Transaction>
+    <Transaction>2021/10/02 18:28:58.000.357,=D:\Teste Via Soft\New\untPrincipal.pas</Transaction>
+    <Transaction>2021/10/02 18:29:16.000.714,D:\Teste Via Soft\New\untPrincipal.pas=</Transaction>
+    <Transaction>2021/10/02 18:29:36.000.178,=D:\Teste Via Soft\New\untPrincipal.pas</Transaction>
+    <Transaction>2021/10/02 18:29:46.000.475,D:\Teste Via Soft\New\untPrincipal.pas=</Transaction>
+    <Transaction>2021/10/02 18:29:52.000.188,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 18:30:25.000.982,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 18:31:06.000.125,=D:\Teste Via Soft\New\untPrincipal.pas</Transaction>
+    <Transaction>2021/10/02 18:31:36.000.793,D:\Teste Via Soft\New\untPrincipal.pas=</Transaction>
+    <Transaction>2021/10/02 18:31:45.000.101,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 18:38:34.000.838,D:\Teste Via Soft\New\Unit1.pas=D:\Teste Via Soft\New\uPrincipal.pas</Transaction>
+    <Transaction>2021/10/02 18:38:34.000.838,D:\Teste Via Soft\New\Unit1.dfm=D:\Teste Via Soft\New\uPrincipal.dfm</Transaction>
+    <Transaction>2021/10/02 20:27:09.000.042,=D:\Teste Via Soft\New\Unit1.pas</Transaction>
+    <Transaction>2021/10/02 20:28:20.000.424,D:\Teste Via Soft\New\Unit1.pas=D:\Teste Via Soft\New\untClassConexao.pas</Transaction>
+    <Transaction>2021/10/03 08:11:16.308,D:\Teste Via Soft\New\uSubstitui.pas=</Transaction>
+    <Transaction>2021/10/03 08:19:21.910,D:\Teste Via Soft\New\TesteDificil.dproj=D:\Teste Via Soft\New\QS6.dproj</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="uINetwork.pas"/>
+    <File Path="untClasses.pas"/>
+    <File Path="untFuncoes.pas"/>
+    <File Path="uPrincipal.pas"/>
+    <File Path="uPrincipal.dfm"/>
+    <File Path="untClassConexao.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>
